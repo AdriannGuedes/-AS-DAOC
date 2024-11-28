@@ -1,0 +1,79 @@
+.home {
+  text-align: center;
+  padding: 0;
+  padding-top: 75px;
+  padding-bottom: 30px;
+  /* Remove espaçamento interno */
+  margin: 0;
+  /* Remove espaçamento externo */
+  position: relative;
+  /* Para posicionar os elementos sobre a imagem */
+  overflow: hidden;
+  
+}
+
+/* Configuração do banner */
+.home-banner {
+  position: relative;
+  height: 100vh;
+  /* Ocupar toda a altura da tela */
+  width: 80%;
+  /* Ocupar toda a largura */
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  /* Texto em branco para contraste */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  /* Sombra no texto */
+}
+
+/* Imagem de fundo */
+.home-banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5%;
+  object-fit: cover;
+  /* Garante que a imagem preencha a área sem distorção */
+  z-index: -1;
+  /* Move a imagem para o fundo */
+}
+
+/* Título e texto */
+.home h2 {
+  font-size: 3rem;
+  margin: 0;
+  z-index: 1;
+  /* Garante que fique acima da imagem */
+}
+
+.home-texto {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  z-index: 1;
+}
+
+/* Botão */
+.home-botao {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #0055aa;
+  /* Azul Volkswagen */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.home-botao:hover {
+  background-color: #003366;
+}
+
+/* Azul mais escuro */

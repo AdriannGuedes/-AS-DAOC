@@ -1,0 +1,74 @@
+.header {
+  background-color: #0d1117; /* Preto fosco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container interno */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Espaçamento entre logo e links */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Logo */
+.header-logo img {
+  height: 50px;
+  transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.header-logo img:hover {
+  transform: scale(1.1); /* Aumenta um pouco o logotipo */
+}
+
+
+.header-nav {
+  display: flex;
+  gap: 15px; 
+  padding-right: 110px;
+}
+
+/* Links de navegação */
+.nav-link {
+  text-decoration: none;
+  color: #ffffff; /* Branco */
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px; /* Cantos arredondados */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #0055aa; /* Azul brilhante */
+  color: #ffffff; /* Branco */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    gap: 10px;
+    background-color: #0d1117;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    display: none; /* Esconde o menu por padrão */
+  }
+
+  .header-nav.active {
+    display: flex; /* Mostra o menu ao clicar no botão */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 133px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-form {
+    background: rgb(242, 241, 255);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(2, 5, 166, 0.632);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease;
+}
+
+.car-form input {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #223e98;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.car-form input:focus {
+    border-color: #223e98;
+    box-shadow: 0 0 5px rgba(110, 142, 251, 0.5);
+    outline: none;
+}
+
+.car-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #123bc3, #0f0753);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.car-form button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.car-form button:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(83, 123, 253, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
